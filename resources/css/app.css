@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-50:  #f0f9ff;
+    --color-brand-100: #e0f2fe;
+    --color-brand-200: #bae6fd;
+    --color-brand-300: #7dd3fc;
+    --color-brand-400: #38bdf8;
+    --color-brand-500: #0ea5e9;
+    --color-brand-600: #0284c7;
+    --color-brand-700: #0369a1;
+    --color-brand-800: #075985;
+    --color-cyan-accent: #22d3ee;
+}
+
+/* Professional Dashboard Overrides */
+@layer components {
+    .card-pro {
+        @apply bg-white border border-slate-200/60 rounded-2xl p-6 transition-all duration-300;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+    
+    .card-pro:hover {
+        @apply border-brand-300/50;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    }
+
+    .table-pro th {
+        @apply bg-slate-50/50 text-slate-500 font-bold text-[11px] uppercase tracking-widest px-6 py-4 border-b border-slate-100;
+    }
+
+    .table-pro td {
+        @apply px-6 py-4 text-sm text-slate-600 border-b border-slate-50;
+    }
+
+    .stat-label {
+        @apply text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 mb-1;
+    }
+
+    .stat-value {
+        @apply text-3xl font-extrabold tracking-tight text-slate-900;
+    }
+}
+
+/* Base Styles */
+html, body { height: 100%; }
+body {
+    background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+    color: #0f172a;
+    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Simple Utility Classes (No @apply to avoid version conflicts) */
+.glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary { background-color: #0284c7; color: white; }
+.btn-primary:hover { background-color: #0369a1; }
+
+.card { background: white; padding: 1.5rem; border-radius: 1rem; border: 1px solid #e2e8f0; }
+
+.badge { 
+    display: inline-flex; 
+    border-radius: 9999px; 
+    padding: 0.125rem 0.625rem; 
+    font-size: 0.75rem; 
+    font-weight: 600; 
+}
+
