@@ -146,5 +146,5 @@ QUICK START
     php artisan serve
 
 Prepared by:
-Anne Stephanne Buenaflor
-Marclean Forteza
+- Anne Stephanne Buenaflor
+- Marclean Forteza
